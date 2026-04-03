@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chow AI Premium | Enterprise Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="chow-pro-container">
+        <!-- AI Side Navigation (Grok Style) -->
+        <aside id="sidebar">
+            <div class="logo-area">
+                <div class="chow-logo">CHOW<span>PRO</span></div>
+            </div>
+            <button class="new-lesson-btn" onclick="location.reload()">
+                <i data-lucide="plus"></i> New Lesson
+            </button>
+            <nav id="subject-menu">
+                <label>MODES</label>
+                <div class="nav-item active" onclick="setMode('General')"><i data-lucide="zap"></i> General Pro</div>
+                <div class="nav-item" onclick="setMode('Math')"><i data-lucide="variable"></i> Math Logic</div>
+                <div class="nav-item" onclick="setMode('History')"><i data-lucide="landmark"></i> Historical Truth</div>
+                <div class="nav-item" onclick="setMode('English')"><i data-lucide="languages"></i> Lit & Grammar</div>
+            </nav>
+            <div class="ai-status-card">
+                <div class="status-row"><span class="dot green"></span> Live Search: Active</div>
+                <div class="status-row"><span class="dot blue"></span> Reasoning: 2026.1</div>
+            </div>
+        </aside>
+
+        <!-- Main Interaction Area (ChatGPT Style) -->
+        <main id="chat-stage">
+            <header id="top-nav">
+                <div class="model-info">Chow AI v4.0 <span class="badge">PRO</span></div>
+                <div id="live-clock"></div>
+            </header>
+
+            <section id="chat-feed">
+                <!-- AI Welcome -->
+                <div class="bubble-row ai">
+                    <div class="ai-avatar">C</div>
+                    <div class="bubble-content">
+                        Hello. I am **Chow AI**, running on the Premium Reasoning Engine. My systems are synchronized with 2025-2026 data. How can I assist your learning today?
+                    </div>
+                </div>
+            </section>
+
+            <!-- Input Bar (Gemini Style) -->
+            <section id="input-dock">
+                <div id="ai-process-display">
+                    <div id="thinking-step" class="step"><i data-lucide="brain"></i> Thinking...</div>
+                    <div id="searching-step" class="step"><i data-lucide="search"></i> Consulting Google...</div>
+                    <div id="verifying-step" class="step"><i data-lucide="shield-check"></i> Verifying Accuracy...</div>
+                </div>
+                <div class="input-container">
+                    <textarea id="userInput" placeholder="Ask anything... (Shift+Enter for new line)" rows="1"></textarea>
+                    <div class="input-tools">
+                        <button id="sendBtn"><i data-lucide="arrow-up"></i></button>
+                    </div>
+                </div>
+                <p class="footer-legal">Chow AI uses Multi-Step Reasoning to ensure zero mistakes in public responses.</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
